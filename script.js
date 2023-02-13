@@ -15,6 +15,8 @@ function displayBooks(id, title, author) {
   removeBtn.textContent = 'Remove';
   removeBtn.id = id;
   items.append(removeBtn, bookLine);
+
+  // remove book
   removeBtn.addEventListener('click', () => {
     books = books.filter((book) => {
       if (book.id === id) {

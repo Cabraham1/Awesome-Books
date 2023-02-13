@@ -95,6 +95,10 @@ To get a local copy up and running follow these simple example steps.
 - GitHub: [@githubhandle](https://github.com/cabraham1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/abrahamchristopher)
 
+👤 **Matee Safi**
+
+- GitHub: [@githubhandle](https://github.com/matee-safi)
+- LinkedIn: [LinkedIn](https://www.linkedin.com)
 
 <!-- CONTRIBUTING -->
 
