@@ -1,5 +1,4 @@
 const form = document.getElementById('form');
-// const list = document.querySelector('.table-part');
 const tableList = document.querySelector('.table-list');
 
 let books = [];
@@ -72,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     const title = document.getElementById('title');
     const author = document.getElementById('author');
-    // if (title.value && author.value) {
     addBook(title.value, author.value);
 
     // clear input
