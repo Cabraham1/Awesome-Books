@@ -3,7 +3,30 @@ const tableList = document.querySelector('.table-list');
 
 let books = [];
 
-function displayBooks(id, title, author) {
+class Books{
+  constructor(id, title, author){
+    this.id = id;
+    this.title = title;
+    this.author = author;
+  }
+
+//  Add book
+
+  addBook() {
+  const {id,title,author} = this;
+  const bookList = new Books(id, title, author)
+
+  if (title === '' || author === '') {
+    errorMessage('Kindly fill all inputs');
+  }
+  else {
+    books.push(bookList);
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+}
+}
+
+  function displayBooks(id, title, author) {
   const items = document.createElement('li');
   items.innerHTML = `
     <h2>Title: ${title}
@@ -30,31 +53,15 @@ function displayBooks(id, title, author) {
 }
 
 // Error message
-function errorMessage(message) {
+  function errorMessage(message) {
   document.querySelector('.error').textContent = message;
   setTimeout(() => {
     document.querySelector('.error').textContent = '';
   }, 4000);
 }
 
-//  Add book
 
-function addBook(title, author) {
-  const id = Date.now();
-  const bookList = {
-    id,
-    title,
-    author,
-  };
-
-  if (title === '' || author === '') {
-    errorMessage('Kindly fill all inputs');
-  } else {
-    books.push(bookList);
-    localStorage.setItem('books', JSON.stringify(books));
-    displayBooks(bookList.id, bookList.title, bookList.author);
-  }
-}
+// displayBooks(bookList.id, bookList.title, bookList.author);
 
 // Global variable to check local storage
 
@@ -69,12 +76,16 @@ books.forEach((book) => {
 document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    const title = document.getElementById('title');
-    const author = document.getElementById('author');
-    addBook(title.value, author.value);
-
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const id = Date.now();
+    const b = new Books(id, title, author);
+    b.addBook();
+    if(title && author){
+      displayBooks(b.id, b.title, b.author)
+    }
     // clear input
-    title.value = '';
-    author.value = '';
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
   });
 });
