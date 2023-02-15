@@ -12,30 +12,28 @@
 </head>
 
 <body>
-  <div class="container">
+  <section id="book-lists">
     <div class="section-one">
       <h1>All awesome books</h1>
     </div>
-  
+    
     <div class="table-part">
-      <ul class="table-list">
+      <ul class="book-list">
       </ul>
     </div>
-    <div class="hr">
-
-    </div>
-  
-    <div class="form-section">
+    </section>
+    
+    <div class="form-section" id="add">
+      <h2>Add a new book</h2>
       <form id="form">
-        <h2>Add a new book</h2>
-        <input type="text" name="title" id="title" class="input" placeholder="Title"><br> 
-        <input type="text" name="author" id="author" class="input" placeholder="Author"><br>
-        <button type="submit" class="btn">Add</button>
+    
+        <input type="text" name="title" id="title" class="input" placeholder="Title"> <br> <br>
         <p class="error"></p>
-  
+        <input type="text" name="author" id="author" class="input" placeholder="Author"> <br> <br>
+        <button type="submit" class="btn">Add</button>
       </form>
     </div>
-  </div>
+  </section>
   <script src="./script.js"></script>
 </body>
 
