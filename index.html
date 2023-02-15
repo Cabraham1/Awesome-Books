@@ -11,7 +11,28 @@
 
 </head>
 
-<body>
+<body class="container" onload="getPageContent('list')">
+  <nav>
+    <p>
+      Awesome Books
+    </p>
+    <ul>
+      <li>
+        <a href="#" onclick="getPageContent('list')">List</a>
+      </li>
+      <li>
+        <a href="#" onclick="getPageContent('addNew')">Add new</a>
+      </li>
+      <li>
+        <a href="#" onclick="getPageContent('contact')">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <h5 class="date"></h5>
+  <div class="content">
+
+  </div>
+<!--   
   <section id="book-lists">
     <div class="section-one">
       <h1>All awesome books</h1>
@@ -33,7 +54,7 @@
         <button type="submit" class="btn">Add</button>
       </form>
     </div>
-  </section>
+  </section> -->
   <script src="./script.js"></script>
 </body>
 
