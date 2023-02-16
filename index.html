@@ -11,51 +11,66 @@
 
 </head>
 
-<body class="container" onload="getPageContent('list')">
-  <nav>
-    <p>
-      Awesome Books
-    </p>
-    <ul>
-      <li>
-        <a href="#" onclick="getPageContent('list')">List</a>
-      </li>
-      <li>
-        <a href="#" onclick="getPageContent('addNew')">Add new</a>
-      </li>
-      <li>
-        <a href="#" onclick="getPageContent('contact')">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  <h5 class="date"></h5>
-  <div class="content">
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <h1>Awesome Books</h1>
+        <ul>
+          <li><a href="#" class="nav-link list active"> List </a></li>
+          <li><a href="#" class="nav-link addNav"> Add new </a></li>
+          <li><a href="#" class="nav-link contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="timeDisplay">
+        <div class="date"></div>
+        <div class="time"></div>
+      </div>
+    </header>
 
+
+    <main>
+      <section id="book-lists">
+        <div class="section-one">
+          <h1>All awesome books</h1>
+        </div>
+
+        <div class="table-part">
+          <ul class="book-list">
+          </ul>
+        </div>
+      </section>
+
+      <div class="form-section" id="add">
+        <h2>Add a new book</h2>
+        <form id="form">
+
+          <input type="text" name="title" id="title" class="input" placeholder="Title"> <br> <br>
+          <p class="error"></p>
+          <input type="text" name="author" id="author" class="input" placeholder="Author"> <br> <br>
+          <button type="submit" class="btn">Add</button>
+        </form>
+      </div>
+
+
+      <section class="info-section" id="contact">
+        <h2>Contact Information</h2>
+        <p>Do you have any questions to ask or you just want to say "Hello"? <br>
+          You can reach out to us!
+        </p>
+        <ul class="info-contact">
+          <li>Our email : mateeabraham@gmail.com</li>
+          <li>Our phone Number : 08067048315</li>
+          <li> Our Address: 22 chiduzor cresent guzape abuja, Nigeria</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>(c) 2022. App by Matee & Abraham</p>
+    </footer>
   </div>
-<!--   
-  <section id="book-lists">
-    <div class="section-one">
-      <h1>All awesome books</h1>
-    </div>
-    
-    <div class="table-part">
-      <ul class="book-list">
-      </ul>
-    </div>
-    </section>
-    
-    <div class="form-section" id="add">
-      <h2>Add a new book</h2>
-      <form id="form">
-    
-        <input type="text" name="title" id="title" class="input" placeholder="Title"> <br> <br>
-        <p class="error"></p>
-        <input type="text" name="author" id="author" class="input" placeholder="Author"> <br> <br>
-        <button type="submit" class="btn">Add</button>
-      </form>
-    </div>
-  </section> -->
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
